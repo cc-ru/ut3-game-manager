@@ -1,0 +1,11 @@
+{name = "ut3-game-manager",
+ version = "0.0.0",
+ dependencies = {
+  {name = "libaevent", version = "^1.1", type = "required"},
+ },
+ files = {
+  {url = "src/main.lua", path = "/usr/bin/ut3-gm.lua"},
+  {url = "src/events.lua", path = "/usr/lib/ut3-gm/events.lua"},
+  {url = "src/module.lua", path = "/usr/lib/ut3-gm/module.lua"},
+ }
+}
