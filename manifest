@@ -9,5 +9,7 @@
   {url = "src/config.lua", path = "/usr/lib/ut3-gm/config.lua"},
   {url = "src/events.lua", path = "/usr/lib/ut3-gm/events.lua"},
   {url = "src/module.lua", path = "/usr/lib/ut3-gm/module.lua"},
+  {url = "src/network.lua", path = "/usr/lib/ut3-gm/network.lua"},
+  {url = "src/store.lua", path = "/usr/lib/ut3-gm/store.lua"},
  }
 }
