@@ -1,10 +1,15 @@
-local evtEngine = require("aevent")()
+local engine = require("aevent")()
 
 local events = {}
 
-events.Init = evtEngine:event("init")
+events.Init = engine:event("init")
+events.SendMessage = engine:event("send-message")
 
-events.engine = evtEngine
+events.DebugMessage = engine:event("debug-message")
+
+engine:stdEvent("debug_message", events.DebugMessage)
+
+events.engine = engine
 
 events.priority = {
   top = 0,

@@ -11,12 +11,44 @@ local function existsFile(path)
 end
 
 local DEFAULT_CONFIG = [==[
+-- Debug card addresses
+addresses.control       = "12345678-1234-1234-1234-1234567890ab"
+addresses.glasses       = "12345678-1234-1234-1234-1234567890ab"
+addresses.infopanels[1] = "12345678-1234-1234-1234-1234567890ab"
+addresses.infopanels[2] = "12345678-1234-1234-1234-1234567890ab"
+addresses.infopanels[3] = "12345678-1234-1234-1234-1234567890ab"
+addresses.infopanels[4] = "12345678-1234-1234-1234-1234567890ab"
+addresses.lamp          = "12345678-1234-1234-1234-1234567890ab"
+addresses.radio         = "12345678-1234-1234-1234-1234567890ab"
 ]==]
 
 local function loadConfig(contents)
-  local base = {}
+  local base = {
+    addresses = {
+      control = {},
+      infopanels = {},
+    }
+  }
 
-  local default = {}
+  local default = {
+    addresses = {
+      control = {
+        red = "12345678-1234-1234-1234-1234567890ab",
+        yellow = "12345678-1234-1234-1234-1234567890ab",
+        green = "12345678-1234-1234-1234-1234567890ab",
+        blue = "12345678-1234-1234-1234-1234567890ab"
+      },
+      infopanels = {
+        [1] = "12345678-1234-1234-1234-1234567890ab",
+        [2] = "12345678-1234-1234-1234-1234567890ab",
+        [3] = "12345678-1234-1234-1234-1234567890ab",
+        [4] = "12345678-1234-1234-1234-1234567890ab",
+      },
+      glasses = "12345678-1234-1234-1234-1234567890ab",
+      lamp = "12345678-1234-1234-1234-1234567890ab",
+      radio = "12345678-1234-1234-1234-1234567890ab",
+    },
+  }
 
   local config = {}
 
